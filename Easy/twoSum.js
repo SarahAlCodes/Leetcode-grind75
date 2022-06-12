@@ -45,6 +45,26 @@ const twoSum = function(nums, target) {
     }
 };
 
+
 //Time complexity: O(n^2) For each element, we try to find its complement by looping through the rest of the array which takes O(n) time. Therefore, the time complexity is O(n^2) 
 
 //Space Complexity: O(1). the space required does not depend on the size of the input array, so only constant space is used.
+
+//Alternative Solution
+
+var twoSums = function (nums, target) {
+    // Loop through the numbers
+    for (var i = 0; i < nums.length; i++) {
+        // Determine the complement (required number) for the current number
+        const complement = target - nums[i];
+
+        // Loop through the array again
+        for (var x = 0; x < nums.length; x++) {
+            // Check if the current number is the first number's complement (and is not the same as the first number)
+            if (x != i && nums[x] == complement) {
+                // Return both numbers
+                return [i, x];
+            }
+        }
+    }
+};
