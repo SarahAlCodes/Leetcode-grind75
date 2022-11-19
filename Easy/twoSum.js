@@ -24,7 +24,8 @@ Output: [0,1]
 //given two paramters assuming they will always be whole integers
     // nums is an array of numbers
     // target is the expected sum of the two nums
-//return thw two indices that will equal the target sum when added
+//return the two indices that will equal the target sum when added
+    //cant use the same element twice
 //examples
     //nums = [2,7,11,15], target = 9 => [0, 1]
     //nums = [3,2,4], target = 6 => [1,2]
